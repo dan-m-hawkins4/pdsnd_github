@@ -18,7 +18,7 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # Get user input for city (chicago, new york city, washington). Use a while loop to repeat process until the enter a valid input.
-    city = ''
+    city = '' #Set the empty variable city as a string
     while city != 'quit':
         print('Please select which city you would like to explore. You can enter Chicago, New York City, or Washington. \nTo quit this program enter quit for any of the first three questions.\n')
         city = input('\nPlease enter your city here: ')
@@ -45,7 +45,7 @@ def get_filters():
 
 
     # Get user input for month selection (all, january, february, ... , june)
-    month = ''
+    month = '' #Set the empty variable month as a string
     while month != 'quit':
         print('Please select which month you would like to analyze. You can select All, January, February, March, April, May or June. \nTo quit this program enter quit for any of the first three questions.\n')
         month = input('\nPlease enter your month selection here: ')
@@ -79,7 +79,7 @@ def get_filters():
             print('\nI do not understand, please try again.\n') # Let the user know their answer is incomplete and they need to try again
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
-    day = ''
+    day = '' #Set the empty variable day as a string
     while day != 'quit':
         print('Please select which day you would like to analyze. You can select All, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday. \nTo quit this program enter quit for any of the first three questions.\n')
         day = input('\nPlease enter your day selection here: ')
