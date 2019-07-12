@@ -171,15 +171,15 @@ def time_stats(df):
 
     # TO DO: display the most common month
     most_common_month = df['month'].mode()[0]
-    print('\nThe most common month (Please note a result of 1 = January, 2 = February, etc.): ', most_common_month)
+    print('\nThe most common month (Please note a result of 1 = January, 2 = February, etc.): ', most_common_month) #Print to the users what has been calculated as the most common month
 
     # TO DO: display the most common day of week
     most_common_day = df['day_of_week'].mode()[0]
-    print('\nThe most common day: ', most_common_day)
+    print('\nThe most common day: ', most_common_day) #Print to the users what has been calculated as the most common day of the week
 
     # TO DO: display the most common start hour
     most_common_start_hour = df['hour'].mode()[0]
-    print('\nThe most common start hour: ', most_common_start_hour)
+    print('\nThe most common start hour: ', most_common_start_hour) #Print to the users what has been calculated as the most common start hour
 
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
@@ -194,15 +194,16 @@ def station_stats(df):
 
     # TO DO: display most commonly used start station
     most_common_start_station = df['Start Station'].mode()[0]
-    print('\nThe most common start station is: ', most_common_start_station)
+    print('\nThe most common start station is: ', most_common_start_station) #Print to the users what has been calculated as the most common start station
 
     # TO DO: display most commonly used end station
     most_common_end_station = df['End Station'].mode()[0]
-    print('\nThe most common end station is: ', most_common_end_station)
+    print('\nThe most common end station is: ', most_common_end_station) #Print to the users what has been calculated as the most common end station
 
     # TO DO: display most frequent combination of start station and end station trip
     df['best_station_combo'] = df['Start Station'] + ' ' + df['End Station']
     print('\nThe most frequent start and end station combination is: {0} '.format(df.best_station_combo.mode()[0])) # An engineer at my company helped me through this one. I'm not sure if that counts as "citing your work" but thought I'd call that out to ensure I'm adhering to the Udacity Honor Code.
+    #Print to the users what has been calculated as the most common match of start station and end station
 
     # Pre loaded data provided by Udacity
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -218,11 +219,11 @@ def trip_duration_stats(df):
 
     # TO DO: display total travel time
     total_travel_time = df['Trip Duration'].sum()/60
-    print('\nThe total travel time is: ', total_travel_time, 'minutes')
+    print('\nThe total travel time is: ', total_travel_time, 'minutes') #Print to the users what has been calculated as the total travel time in minutes
 
     # TO DO: display mean travel time
     mean_travel_time = df['Trip Duration'].mean()/60
-    print('\nThe mean travel time is: ', mean_travel_time, 'minutes')
+    print('\nThe mean travel time is: ', mean_travel_time, 'minutes') #Print to the users what has been calculated as the average travel time in minutes
 
     # Pre loaded data provided by Udacity
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -238,13 +239,13 @@ def user_stats(df):
 
     # TO DO: Display counts of user types
     user_types = df['User Type'].value_counts()
-    print('\nThe user stats are: ')
+    print('\nThe user stats are: ') #Print to the users what has been calculated as the most common users types
     print(user_types)
 
     # TO DO: Display counts of gender
     try: #Run this code when we have gender data
         gender_counts = df['Gender'].value_counts()
-        print('\nThe gender stats are: ')
+        print('\nThe gender stats are: ') #Print to the users are the current gender counts
         print(gender_counts)
     except KeyError: # Call out washington doesn't have any of this data and therefore cannot report on it
         print('\nWashington does not have any gender data to report.')
@@ -255,9 +256,9 @@ def user_stats(df):
         earliest = df['Birth Year'].min()
         most_recent = df['Birth Year'].max()
         most_common_year = df['Birth Year'].mode()[0]
-        print('\nThe earliest birth year of a user is: ', earliest)
-        print('\nThe most recent birth year of a user is: ', most_recent)
-        print('\nThe most common birth year amongst users is: ', most_common_year)
+        print('\nThe earliest birth year of a user is: ', earliest) #Print to the users what has been calculated as the earliest birth year
+        print('\nThe most recent birth year of a user is: ', most_recent) #Print to the users what has been calculated as the most recent birth year
+        print('\nThe most common birth year amongst users is: ', most_common_year) #Print to the users what has been calculated as the most common birth year 
     except KeyError: # Call out that washington does not have any of this data and therefore cannot report on it
         print('\nWashington does not have any birth year data to report.')
 
